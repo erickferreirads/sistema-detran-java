@@ -27,4 +27,10 @@ Sistema inspirado no DETRAN para gerenciamento de veículos, com:
 - **Linguagem**: Java (POO)  
 - **Banco de Dados**: Oracle Cloud (JDBC)  
 - **Padrões**: SOLID, Clean Code  
-- **Ferramentas**: GitHub Projects, Maven (opcional)  
+- **Ferramentas**: GitHub Projects, Maven (opcional)
+
+## 👥 Contribuidores
+- Erick Vinícius Ferreira da Silva - RA12925114010
+-
+-
+-
