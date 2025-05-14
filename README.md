@@ -32,6 +32,5 @@ Sistema inspirado no DETRAN para gerenciamento de veículos, com:
 ## 👥 Contribuidores
 - Erick Vinícius Ferreira da Silva - RA12925114010
 - Adriano Junior de Oliveira - RA12925114205
--Fabrício Jardim Zietlow
-RA12925114421
--
+- Fabrício Jardim Zietlow - RA12925114421
+- Pedro Henrique Silva de Oliveira - RA12925115152
