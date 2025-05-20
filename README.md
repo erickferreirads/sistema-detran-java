@@ -26,7 +26,7 @@ Sistema inspirado no DETRAN para gerenciamento de veículos, com:
 ## 🛠️ Tecnologias  
 - **Linguagem**: Java (POO)  
 - **Banco de Dados**: Oracle Cloud (JDBC)  
-- **Padrões**: SOLID, Clean Code  
+- **Padrões**: SOLID, CRUD, Clean Code  
 - **Ferramentas**: GitHub Projects, Maven (opcional)
 
 ## 👥 Contribuidores
