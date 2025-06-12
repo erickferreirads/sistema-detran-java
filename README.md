@@ -1,5 +1,5 @@
-Sistema de Gestão de Veículos (Estilo DETRAN)
-Este projeto é uma aplicação de ambiente de trabalho (desktop) em Java com interface gráfica (GUI), desenvolvida como parte da avaliação de Programação de Soluções Computacionais. O sistema simula as operações essenciais de um DETRAN, como gestão de proprietários e veículos, transferências e emissão de relatórios, com todos os dados a serem persistidos numa base de dados MySQL.
+🚗 Sistema de Gestão de Veículos (Estilo DETRAN)
+<div align="center"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Swing-6DB33F?style=for-the-badge&logo=java&logoColor=white" /> </div>
 
 Tecnologias Utilizadas
 Linguagem: Java (JDK 11 ou superior)
