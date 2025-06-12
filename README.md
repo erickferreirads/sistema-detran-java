@@ -1,6 +1,5 @@
-🚗 Sistema de Gestão de Veículos (Estilo DETRAN)
-<div align="center"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/> <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/> <img src="https://img.shields.io/badge/Swing-6DB33F?style=for-the-badge&logo=java&logoColor=white" alt="Swing"/> </div>
-📌 Visão Geral
+# 🚗 Sistema de Gestão de Veículos (Estilo DETRAN)
+## 📌 Visão Geral
 Aplicação desktop em Java com interface gráfica (Swing) para simular operações de um DETRAN, incluindo:
 
 ✔ Cadastro de proprietários e veículos
@@ -11,13 +10,13 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
 
 ✔ Persistência em banco de dados MySQL
 
-🛠️ Tecnologias
+## 🛠️ Tecnologias
 Componente	Tecnologia
 Linguagem	Java (JDK 11+)
 Interface	Java Swing
 Banco de Dados	MySQL 8.0+
 Driver	MySQL Connector/J
-🎯 Funcionalidades
+## 🎯 Funcionalidades
 Cadastros
 ✅ Proprietários (com validação de CPF único)
 
@@ -37,11 +36,12 @@ Relatórios
 
 🔄 Lista de veículos com placas no formato antigo
 
-🚀 Configuração
+## 🚀 Configuração
 1. Banco de Dados
+   
 Execute o script SQL para criar a estrutura:
 
-sql
+```
 CREATE DATABASE IF NOT EXISTS sistema_detran;  
 USE sistema_detran;  
 
@@ -64,11 +64,21 @@ CREATE TABLE transferencias (
   id INT AUTO_INCREMENT PRIMARY KEY,  
   placa_veiculo VARCHAR(10) NOT NULL,  
   cpf_novo_proprietario VARCHAR(11) NOT NULL,  
-  data_transferencia DATE NOT NULL  
+  data_transferencia DATE NOT NULL
 );
+```
+
 2. Dados de Teste
+   
 Proprietários Cadastrados
-sql
+
+```
+USE sistema_detran;
+
+DELETE FROM transferencias;
+DELETE FROM veiculos;
+DELETE FROM proprietarios;
+
 INSERT INTO proprietarios (cpf, nome) VALUES
 ('11122233344', 'Homer Simpson'),
 ('22233344455', 'Mickey Mouse'),
@@ -76,35 +86,41 @@ INSERT INTO proprietarios (cpf, nome) VALUES
 ('44455566677', 'Fred Flintstone'),
 ('55566677788', 'Bob Esponja Calça Quadrada'),
 ('66677788899', 'Pato Donald');
-Veículos Cadastrados
-sql
+
 -- VEÍCULOS PLACA FORMATO ANTIGO
+
 INSERT INTO veiculos (placa, marca, modelo, ano, cor, cpf_proprietario) VALUES
 ('ABC1234', 'Plymouth', 'Sedan (The Homer)', 1986, 'Rosa', '11122233344'),
 ('DEF5678', 'Hot-Dog-Móvel', 'Veículo Especial', 2019, 'Vermelho', '22233344455'),
 ('GHI9012', 'ACME', 'Foguete', 2018, 'Marrom', '33344455566');
 
 -- VEÍCULOS PLACA MERCOSUL
+
 INSERT INTO veiculos (placa, marca, modelo, ano, cor, cpf_proprietario) VALUES
 ('JKL3M45', 'Flintmobile', 'Troncomóvel', 1960, 'Madeira', '44455566677'),
 ('MNO6P78', 'Barco-Móvel', 'Anfíbio', 2022, 'Amarelo', '55566677788'),
 ('QRS9T01', 'Bela-313', 'Roadster', 1934, 'Vermelho/Azul', '66677788899'),
 ('UVW2X34', 'Canyonero', 'SUV', 2020, 'Branco', '11122233344');
-Histórico de Transferências
-sql
+
+-- Histórico de Transferências
+
 INSERT INTO transferencias (placa_veiculo, cpf_novo_proprietario, data_transferencia) VALUES
 ('GHI9012', '44455566677', '2022-08-15'),
 ('GHI9012', '55566677788', '2023-05-20'),
 ('QRS9T01', '22233344455', '2024-01-10');
+```
+
 3. Conexão
+   
 Edite as credenciais em src/org/example/util/DB.java:
 
-java
+```
 private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/sistema_detran";  
 private static final String USER = "seu_usuario";  
 private static final String PASSWORD = "sua_senha";
+```
 
-👥 Autores
+## 👥 Autores
 
 Erick Vinícius Ferreira da Silva / RA: 12925114010
 
