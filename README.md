@@ -31,7 +31,6 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
       <td>Banco de Dados</td>
       <td>MySQL 8.0+</td>
     </tr>
-     </tr>
       <tr>
       <td>Driver</td>
       <td>MySQL Connector/J</td>
