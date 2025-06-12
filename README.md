@@ -41,16 +41,22 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
 
 ## 🎯 Funcionalidades
 Cadastros
+
+
 ✅ Proprietários (com validação de CPF único)
 
 ✅ Veículos (placas geradas automaticamente no padrão Mercosul)
 
 Operações
+
+
 🔄 Transferência de veículos com histórico
 
 🗑️ Baixa de veículos (restrita a veículos sem transferências)
 
 Relatórios
+
+
 📊 Veículos por proprietário (via CPF)
 
 📅 Transferências por período
