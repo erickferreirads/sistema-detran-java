@@ -7,7 +7,7 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
 ✔ Relatórios personalizados
 ✔ Persistência em banco de dados MySQL
 
-##🛠️ Tecnologias
+##🛠️ Tecnologias ##
 Componente	Tecnologia
 Linguagem	Java (JDK 11+)
 Interface	Java Swing
@@ -64,7 +64,9 @@ CREATE TABLE transferencias (
 );  
 
 2. Dados de Teste
+3. 
 Proprietários Cadastrados
+
 sql
 INSERT INTO proprietarios (cpf, nome) VALUES
 ('11122233344', 'Homer Simpson'),
@@ -75,6 +77,7 @@ INSERT INTO proprietarios (cpf, nome) VALUES
 ('66677788899', 'Pato Donald');
 
 Veículos Cadastrados
+
 sql
 -- VEÍCULOS PLACA FORMATO ANTIGO
 INSERT INTO veiculos (placa, marca, modelo, ano, cor, cpf_proprietario) VALUES
