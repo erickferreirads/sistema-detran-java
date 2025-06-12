@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class DB {
     private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/sistema_detran?useSSL=false&allowPublicKeyRetrieval=true";
-    private static final String USER = "root";
-    private static final String PASSWORD = "@lgor1tmoDificil";
+    private static final String USER = "seu-user";
+    private static final String PASSWORD = "sua-senha";
 
     public static Connection getConnection() throws SQLException {
         try {
