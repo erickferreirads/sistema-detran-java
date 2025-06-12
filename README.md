@@ -11,11 +11,34 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
 ✔ Persistência em banco de dados MySQL
 
 ## 🛠️ Tecnologias
-Componente	Tecnologia
-Linguagem	Java (JDK 11+)
-Interface	Java Swing
-Banco de Dados	MySQL 8.0+
-Driver	MySQL Connector/J
+<table>
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Tecnologia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Linguagem </td>
+      <td>Java (JDK 11+)</td>
+    </tr>
+    <tr>
+      <td>Interface</td>
+      <td>Java Swing</td>
+    </tr>
+      <tr>
+      <td>Banco de Dados</td>
+      <td>MySQL 8.0+</td>
+    </tr>
+     </tr>
+      <tr>
+      <td>Driver</td>
+      <td>MySQL Connector/J</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 🎯 Funcionalidades
 Cadastros
 ✅ Proprietários (com validação de CPF único)
