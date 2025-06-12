@@ -153,7 +153,7 @@ private static final String PASSWORD = "sua_senha";
 
 Erick Vinícius Ferreira da Silva / RA: 12925114010
 
-Nome do Integrante 2
+Fabrício Jardim Zietlow / RA: 12925114421
 
 Nome do Integrante 3
 
