@@ -1,4 +1,4 @@
-🚗 Sistema de Gestão de Veículos (Estilo DETRAN)
+# 🚗 Sistema de Gestão de Veículos (Estilo DETRAN)
 <div align="center"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Swing-6DB33F?style=for-the-badge&logo=java&logoColor=white" /> </div>
 📌 Visão Geral
 Aplicação desktop em Java com interface gráfica (Swing) para simular operações de um DETRAN, incluindo:
@@ -7,19 +7,19 @@ Aplicação desktop em Java com interface gráfica (Swing) para simular operaç�
 ✔ Relatórios personalizados
 ✔ Persistência em banco de dados MySQL
 
-🛠️ Tecnologias
+##🛠️ Tecnologias
 Componente	Tecnologia
 Linguagem	Java (JDK 11+)
 Interface	Java Swing
 Banco de Dados	MySQL 8.0+
 Driver	MySQL Connector/J
-🎯 Funcionalidades
-Cadastros
+##🎯 Funcionalidades
+###Cadastros
 ✅ Proprietários (com validação de CPF único)
 
 ✅ Veículos (placas geradas automaticamente no padrão Mercosul)
 
-Operações
+###Operações
 🔄 Transferência de veículos com histórico
 
 🗑️ Baixa de veículos (restrita a veículos sem transferências)
@@ -33,12 +33,12 @@ Relatórios
 
 🔄 Lista de veículos com placas no formato antigo
 
-🚀 Configuração
+##🚀 Configuração
 1. Banco de Dados
 Execute o script SQL para criar a estrutura:
 
 sql
-CREATE DATABASE IF NOT EXISTS detran_computacional;  
+CREATE DATABASE IF NOT EXISTS sistema_detran;  
 USE detran_computacional;  
 
 CREATE TABLE proprietarios (  
@@ -73,6 +73,7 @@ INSERT INTO proprietarios (cpf, nome) VALUES
 ('44455566677', 'Fred Flintstone'),
 ('55566677788', 'Bob Esponja Calça Quadrada'),
 ('66677788899', 'Pato Donald');
+
 Veículos Cadastrados
 sql
 -- VEÍCULOS PLACA FORMATO ANTIGO
