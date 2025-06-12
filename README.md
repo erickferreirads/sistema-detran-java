@@ -154,7 +154,7 @@ Erick Vinícius Ferreira da Silva / RA: 12925114010
 
 Fabrício Jardim Zietlow / RA: 12925114421
 
-Nome do Integrante 3
+Pedro Henrique Silva de Oliveira / RA: 12925115152
 
 Nome do Integrante 4
 
