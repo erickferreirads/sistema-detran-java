@@ -32,6 +32,6 @@ INSERT INTO veiculos (placa, marca, modelo, ano, cor, cpf_proprietario) VALUES
 
 -- 3. Inserção de Histórico de Transferências
 INSERT INTO transferencias (placa_veiculo, cpf_novo_proprietario, data_transferencia) VALUES
-('GHI-9012', '44455566677', '2022-08-15'),
-('GHI-9012', '55566677788', '2023-05-20'),
+('GHI9012', '44455566677', '2022-08-15'),
+('GHI9012', '55566677788', '2023-05-20'),
 ('QRS9T01', '22233344455', '2024-01-10');
