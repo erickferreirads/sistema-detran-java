@@ -14,46 +14,26 @@ import java.util.Map;
 
 public class SistemaDAO {
 
-    public void executarTransferenciaCompleta(String placaAntiga, String placaNova, Proprietario novoProp) throws SQLException, Exception {
-        String sqlUpdateVeiculo = "UPDATE veiculos SET placa = ?, cpf_proprietario = ? WHERE placa = ?";
-        String sqlInsertTransferencia = "INSERT INTO transferencias (placa_veiculo, cpf_novo_proprietario, data_transferencia) VALUES (?, ?, ?)";
+    public void executarTransferencia(String placaAntiga, String placaNova, Proprietario novoProp) throws SQLException {
 
-        Connection conn = null;
-        try {
-            conn = DB.getConnection();
-            conn.setAutoCommit(false); // Inicia a transação
+        String sqlUpdate = "UPDATE veiculos SET placa = ?, cpf_proprietario = ? WHERE placa = ?";
+        try (Connection conn = DB.getConnection(); PreparedStatement stmt = conn.prepareStatement(sqlUpdate)) {
+            stmt.setString(1, placaNova);
+            stmt.setString(2, novoProp.getCpf());
+            stmt.setString(3, placaAntiga);
+            stmt.executeUpdate();
+        }
 
-            try (PreparedStatement stmtUpdate = conn.prepareStatement(sqlUpdateVeiculo)) {
-                stmtUpdate.setString(1, placaNova);
-                stmtUpdate.setString(2, novoProp.getCpf());
-                stmtUpdate.setString(3, placaAntiga);
-                int linhasAfetadas = stmtUpdate.executeUpdate();
-                if (linhasAfetadas == 0) {
-                    throw new Exception("Falha na atualização: Veículo com placa '" + placaAntiga + "' não foi encontrado.");
-                }
-            }
-
-            try (PreparedStatement stmtInsert = conn.prepareStatement(sqlInsertTransferencia)) {
-                stmtInsert.setString(1, placaNova);
-                stmtInsert.setString(2, novoProp.getCpf());
-                stmtInsert.setDate(3, Date.valueOf(LocalDate.now()));
-                stmtInsert.executeUpdate();
-            }
-
-            conn.commit(); // Confirma a transação se tudo correu bem
-
-        } catch (Exception e) {
-            if (conn != null) conn.rollback(); // Desfaz tudo em caso de erro
-            throw e; // Lança o erro para a GUI
-        } finally {
-            if (conn != null) {
-                conn.setAutoCommit(true);
-                conn.close();
-            }
+        String sqlInsert = "INSERT INTO transferencias (placa_veiculo, cpf_novo_proprietario, data_transferencia) VALUES (?, ?, ?)";
+        try (Connection conn = DB.getConnection(); PreparedStatement stmt = conn.prepareStatement(sqlInsert)) {
+            stmt.setString(1, placaNova);
+            stmt.setString(2, novoProp.getCpf());
+            stmt.setDate(3, Date.valueOf(LocalDate.now()));
+            stmt.executeUpdate();
         }
     }
 
- 
+
     public void cadastrarProprietario(Proprietario proprietario) throws SQLException {
         String sql = "INSERT INTO proprietarios (cpf, nome) VALUES (?, ?)";
         try (Connection conn = DB.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -142,7 +122,7 @@ public class SistemaDAO {
     }
     public List<Veiculo> listarVeiculosComPlacaAntiga() throws SQLException {
         List<Veiculo> veiculos = new ArrayList<>();
-        String sql = "SELECT v.*, p.nome as proprietario_nome FROM veiculos v JOIN proprietarios p ON v.cpf_proprietario = p.cpf WHERE v.placa REGEXP '^[A-Z]{3}-[0-9]{4}$'";
+        String sql = "SELECT v.*, p.nome as proprietario_nome FROM veiculos v JOIN proprietarios p ON v.cpf_proprietario = p.cpf WHERE v.placa REGEXP '^[A-Z]{3}[0-9]{4}$'";
         try (Connection conn = DB.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql); ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) veiculos.add(extrairVeiculoDoResultSet(rs));
         }

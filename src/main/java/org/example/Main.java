@@ -131,7 +131,7 @@ public class Main extends JFrame {
             String placaAntiga = veiculo.getPlaca();
             String placaNova = placaService.converterParaMercosul(placaAntiga);
 
-            sistemaDAO.executarTransferenciaCompleta(placaAntiga, placaNova, novoProp);
+            sistemaDAO.executarTransferencia(placaAntiga, placaNova, novoProp);
 
             String mensagem = "Transferência realizada com sucesso!";
             if (!placaAntiga.equals(placaNova)) {
