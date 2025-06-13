@@ -53,8 +53,7 @@ public class SistemaDAO {
         }
     }
 
-    // --- MÉTODOS EXISTENTES ---
-    // (O resto dos métodos que você forneceu, sem alterações)
+ 
     public void cadastrarProprietario(Proprietario proprietario) throws SQLException {
         String sql = "INSERT INTO proprietarios (cpf, nome) VALUES (?, ?)";
         try (Connection conn = DB.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
