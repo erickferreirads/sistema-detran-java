@@ -64,6 +64,16 @@ Relatórios
 
 🔄 Lista de veículos com placas no formato antigo
 
+## Conexão
+   
+Edite as credenciais em src/org/example/util/DB.java:
+
+```
+private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/sistema_detran";  
+private static final String USER = "seu_usuario";  
+private static final String PASSWORD = "sua_senha";
+```
+
 
 ## 👥 Autores
 
