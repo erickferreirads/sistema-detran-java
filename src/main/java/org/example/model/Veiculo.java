@@ -1,7 +1,7 @@
 package org.example.model;
 
 public class Veiculo {
-    private String placa; // Deve ser única
+    private String placa;
     private String marca;
     private String modelo;
     private int ano;
