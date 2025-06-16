@@ -14,18 +14,18 @@ public class PlacaService {
     public String converterParaMercosul(String placaAntiga) {
         if (placaAntiga == null) return null;
 
-        // Remove hífens ou espaços e converte para maiúsculas
+        // Remove hífem ou espaço e converte para maiúscula
         String placaUpper = placaAntiga.replaceAll("[^a-zA-Z0-9]", "").toUpperCase();
 
         // Valida o formato antigo (AAA9999)
         if (!placaUpper.matches("[A-Z]{3}\\d{4}")) {
-            return placaAntiga; // Retorna original se não for uma placa antiga válida
+            return placaAntiga; 
         }
 
         String tresPrimeirasLetras = placaUpper.substring(0, 3);
         char primeiroNumero = placaUpper.charAt(3);
         char segundoNumeroChar = placaUpper.charAt(4);
-        String ultimosDoisNumeros = placaUpper.substring(5, 7); // Pega os dígitos 6 e 7
+        String ultimosDoisNumeros = placaUpper.substring(5, 7);
 
         int segundoNumeroInt = Character.getNumericValue(segundoNumeroChar);
         if (segundoNumeroInt < 0 || segundoNumeroInt > 9) {
