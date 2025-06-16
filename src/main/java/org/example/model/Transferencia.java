@@ -6,7 +6,7 @@ public class Transferencia {
     private int  id;
     private final String placaVeiculo;
     private final String cpfNovoProprietario;
-    private final LocalDate dataTransferencia; //
+    private final LocalDate dataTransferencia;
 
     public Transferencia(String placaVeiculo, String cpfNovoProprietario, LocalDate dataTransferencia) {
         this.placaVeiculo = placaVeiculo;
