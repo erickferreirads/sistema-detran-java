@@ -2,7 +2,7 @@ package org.example.model;
 
 public class Proprietario {
     private String nome;
-    private String cpf; // Deve ser único
+    private String cpf;
 
     public Proprietario(String nome, String cpf) {
         this.nome = nome;
